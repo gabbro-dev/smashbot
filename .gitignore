@@ -2,4 +2,4 @@
 __pycache__/
 # Sandbox
 sandbox.py
-token.txt
+.env

@@ -1,7 +1,9 @@
 import nextcord
+import os
 from nextcord import Interaction
 from nextcord.ext import commands
 from mainCode import Players, getArgRankProfiles, rows
+from dotenv import load_dotenv
 
 # Get all profiles
 print("Launching bot")
@@ -9,9 +11,8 @@ print("=" * 100)
 getArgRankProfiles()
 
 # Get token
-tk = open("token.txt", "r")
-TOKEN = tk.read()
-tk.close()
+load_dotenv()
+TOKEN = os.getenv()
 
 # Para que solo funcione en un server (Discord tarda 1 hora aprox para actualizar slash commands si no)
 testServerId = 858156171704795136 # <--- Server de Los Panitas
