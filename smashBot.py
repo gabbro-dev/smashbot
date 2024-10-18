@@ -8,6 +8,11 @@ print("Launching bot")
 print("=" * 100)
 getArgRankProfiles()
 
+# Get token
+tk = open("token.txt", "r")
+TOKEN = tk.read()
+tk.close()
+
 # Para que solo funcione en un server (Discord tarda 1 hora aprox para actualizar slash commands si no)
 testServerId = 858156171704795136 # <--- Server de Los Panitas
 # Smash Bros Roster Stock Icons
@@ -529,4 +534,4 @@ async def searchProfileByTop(interaction: Interaction, top: int):
 """ ===================================================================== """
 
 # Run bot with token
-bot.run('MTIzMzU4MTU0MzE4OTEyMzA4Mw.GiMfC8.fTOxx_5vRtYIW7sA7GdgA8z--lPeUC3txMVr3U')
+bot.run(TOKEN)
